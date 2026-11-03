@@ -24,6 +24,31 @@
 
 ---
 
+## 想让 AI 全自动帮你刷？看这个
+
+本仓库除了给人看的教程，还内置了一套**给 AI 看的执行指令包**：
+
+| 文件 | 作用 |
+|---|---|
+| [AI_AGENT.md](AI_AGENT.md) | **核心**：给 AI 的角色设定 + 六道门禁流程 + 铁律 + 什么时候必须停下来问人 |
+| [CHECKLIST.md](CHECKLIST.md) | 验收清单，逐条打勾才算完成 |
+| [docs/事实卡.md](docs/事实卡.md) | 实测数据（MD5 / 内核版本 / 分区结构 / 反直觉结论），AI 的判断依据 |
+| [docs/命令库.md](docs/命令库.md) | 全部实测可用的命令 + 不可用命令黑名单 + 报错对照表 |
+| [scripts/10_env_check.sh](scripts/10_env_check.sh) | G1 环境自检（adb / 设备 / 解锁状态 / 单槽确认） |
+| [scripts/20_verify_boot.py](scripts/20_verify_boot.py) | G3/G4 boot 镜像三重校验（体积 / 内核版本 / 补丁特征） |
+| [scripts/30_flash_and_verify.sh](scripts/30_flash_and_verify.sh) | G5 带门禁的刷入 + 自动验证 |
+
+**用法**：把这个仓库丢给任意 AI，说一句
+
+> 按 AI_AGENT.md 的流程，帮我给 iQOO 10 刷 KernelSU root
+
+AI 就会按门禁逐步执行、逐步校验，卡住时会停下来问你，而不是瞎试。
+
+> 注意：**打补丁这一步必须在手机上手动点**（KernelSU 管理器里选「选择并修补一个文件」），AI 代替不了。
+> 这也是整条流程里唯一必须人工的环节。
+
+---
+
 ## 0. 先看这里：风险与底线
 
 ### 0.1 一句话总结
