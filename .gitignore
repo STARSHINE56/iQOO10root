@@ -1,3 +1,5 @@
 *.img
 *.zip
 *.log
+push.ps1
+upload.bat
